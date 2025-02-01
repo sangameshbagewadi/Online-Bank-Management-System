@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo:--Images</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body,
+      html {
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        width: 100%;
+        height: 100vh;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        scroll-snap-align: start;
+        border-radius: 10px;
+      }
+
+      /* Optional: Add styles for better appearance */
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-color: #f0f0f0;
+      }
+
+      .image-container::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .image-container::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+      }
+
+      .image-container::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Website Screenshots</h1>
+    <div class="image-container">
+      <img src="images/Home.png" alt="Image 1" />
+      <img src="images/manager.png" alt="Image 2" />
+      <img src="images/customer.png" alt="Image 3" />
+      <img src="images/create.png" alt="Image 4" />
+      <img src="images/cash.png" alt="Image 5" />
+      <img src="images/money.png" alt="Image 6" />
+    </div>
+  </body>
+</html>
